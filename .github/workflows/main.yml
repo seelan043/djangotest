@@ -33,7 +33,7 @@ jobs:
 
     - name: Build and push the image tagged with the git commit hash
       run: |
-        cd djangoprjt
+        cd djangotestprjt
         docker build . -t ${{ env.CONTAINER_REGISTRY }}/djangoapp2:${{ github.sha }}
         docker push ${{ env.CONTAINER_REGISTRY }}/djangoapp2:${{ github.sha }} 
 
